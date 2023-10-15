@@ -8,7 +8,7 @@ pipeline {
         stage("read vault key") {
             steps {
 
-                echo "These secrets will be masked: ${SECRET1} and ${SECRET2}"
+                echo "These secrets will be masked: ${SECRET1} and ${SECRET2} + my first jenkinsfile example"
 
             }
         }
