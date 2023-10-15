@@ -1,0 +1,16 @@
+pipeline {
+    agent any
+    environment {
+        SECRET1    = vault path: 'secret/vault-example', key: 'keyone', vaultUrl: 'http://vault-compose:8200'
+        SECRET2    = vault path: 'secret/vault-example', key: 'keytwo', vaultUrl: 'http://vault-compose:8200'
+    }
+    stages {
+        stage("read vault key") {
+            steps {
+
+                echo "These secrets will be masked: ${SECRET1} and ${SECRET2}"
+
+            }
+        }
+}
+    }
